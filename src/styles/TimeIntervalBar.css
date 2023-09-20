@@ -1,0 +1,24 @@
+.time-interval-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.time-interval-bar-fill {
+  height: 100%;
+  transition: width 0.5s;
+}
+
+.time-interval-bar-fill-green {
+  background-color: #6dd072; /* Green */
+}
+
+.time-interval-bar-fill-yellow {
+  background-color: #ffd700; /* Yellow */
+}
+
+.time-interval-bar-fill-red {
+  background-color: #ff6b6b; /* Red */
+}

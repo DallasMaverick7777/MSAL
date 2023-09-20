@@ -1,0 +1,93 @@
+.App {
+    text-align: center;
+}
+
+.data-area-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.iconText {
+    margin: 0 .5rem
+}
+
+.navbarStyle {
+    background-color: #292b2c;
+    padding: 0.5rem 1rem !important;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.navbarButton {
+    color: #fff !important;
+    padding: .5rem 1rem !important;
+}
+
+.tableColumn {
+    word-break: break-all
+}
+
+.table {
+    max-height: 37rem;
+}
+
+/* .card {
+    max-width: 20rem !important;
+    margin: 2px;
+    padding: 2px;
+} */
+
+.card {
+    --card-max-width: 20rem;
+    --card-margin: 0.5rem;
+    --card-padding: 0.5rem;
+    max-width: var(--card-max-width);
+    margin: var(--card-margin);
+    padding: var(--card-padding);
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.cardImage {
+    width: 180px !important;
+    height: 180px;
+
+}
+
+.warningMessage {
+    color: red;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+    .data-area-div {
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .table {
+        max-height: initial;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        --card-max-width: 100%;
+        --card-margin: 1rem 0;
+        --card-padding: 1rem;
+    }
+}
