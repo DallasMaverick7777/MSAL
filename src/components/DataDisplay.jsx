@@ -155,7 +155,8 @@ export const ContactsData = (props) => {
 };
 
 export const ShiftsData = (props) => {
-    console.log('ShiftsData props:', props);
+
+
     return (
         <Container>
         <Row>
@@ -209,7 +210,5 @@ export const ShiftsData = (props) => {
         </Row>         
     </Container>
     );
-  
 }
-
 

@@ -21,6 +21,7 @@ export const Shifts = () => {
   }, [shiftsData]);
 
   if (error) {
+    console.log('Error fetching shifts data:', error.message);  // Log error
     return <div>Error: {error.message}</div>;
   }
 

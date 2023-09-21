@@ -1,32 +1,29 @@
 import { useEffect, useState } from 'react';
-
 import { protectedResources } from '../authConfig';
 import useGraphWithMsal from '../hooks/useGraphWithMsal';
 import { SharePointListData } from '../components/SharePointListData';
 
-
 export const SharePointList = () => {
-    const [graphData, setGraphData] = useState(null);
+    const [sharepointListData, setSharepointListData] = useState(null);
     console.log("protectedResources:2",protectedResources)
     const { error, result, execute } = useGraphWithMsal({
         scopes: protectedResources.sharepointLists?.scopes,
     }, protectedResources.sharepointLists?.endpoint);
 
     useEffect(() => {
-        if (!!graphData) {
+        if (!!sharepointListData) {
             return;
         }
 
-        if (!graphData) {
-            execute(protectedResources.sharepointLists.endpoint).then((data) => {
-                setGraphData(data);
-            });
+        execute(protectedResources.sharepointLists.endpoint).then((data) => {
+            setSharepointListData(data);
+          });
+        }, [sharepointListData]);
+      
+        if (error) {
+          console.log('Error fetching Sharepoint data:', error.message);  // Log error
+          return <div>Error: {error.message}</div>;
         }
-    }, [graphData, execute, result]);
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
-    }
-
-    return <>{graphData ? <SharePointListData response={result} graphData={graphData} /> : null}</>;
+    return <>{sharepointListData ? <SharePointListData response={result} sharepointListData={sharepointListData} /> : null}</>;
 };
