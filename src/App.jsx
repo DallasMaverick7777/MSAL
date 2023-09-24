@@ -4,11 +4,11 @@ import { MsalProvider } from '@azure/msal-react';
 import { PageLayout } from './components/PageLayout';
 import { Profile } from './pages/Profile';
 import { Contacts } from './pages/Contacts';
+import { SharepointLists } from './pages/SharepointLists';
 import { Home } from './pages/Home';
 
 import './styles/App.css';
 import { Shifts } from './pages/Shifts';
-import { SharePointListData } from './components/SharePointListData';
 
 
 const Pages = () => {
@@ -17,7 +17,7 @@ const Pages = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/shifts" element={<Shifts />} />
-            <Route path="/SharepointLists" element={<SharePointListData />} />
+            <Route path="/SharepointLists" element={<SharepointLists />} />
             <Route path="/" element={<Home />} />
         </Routes>
     );

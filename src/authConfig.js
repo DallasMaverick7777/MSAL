@@ -80,7 +80,7 @@ export const protectedResources = {
     },
     sharepointLists: {
         scopes: ['Sites.Read.All', 'Sites.ReadWrite.All'], // Adjust scopes as needed
-        endpoint: 'https://graph.microsoft.com/v1.0/sites/94bcd49c-d182-4072-9f8a-cc3b9b999d8a/lists/f69dea45-003b-4ba8-8332-3c235cc55697/items', // Adjust endpoint as needed
+        endpoint: 'https://graph.microsoft.com/v1.0/sites/94bcd49c-d182-4072-9f8a-cc3b9b999d8a/lists/f69dea45-003b-4ba8-8332-3c235cc55697/items?expand=fields', // Adjust endpoint as needed
     },
 };
 

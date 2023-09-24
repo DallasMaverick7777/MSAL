@@ -11,14 +11,10 @@ export const Shifts = () => {
   }, protectedResources.graphShifts.endpoint);
 
   useEffect(() => {
-    if (!!shiftsData) {
-      return;
-    }
-
     execute(protectedResources.graphShifts.endpoint).then((data) => {
       setShiftsData(data);
     });
-  }, [shiftsData]);
+  }, [protectedResources.graphShifts.endpoint, result]);
 
   if (error) {
     console.log('Error fetching shifts data:', error.message);  // Log error

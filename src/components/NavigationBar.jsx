@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
-import { Nav, Navbar, Button, Dropdown, DropdownButton } from 'react-bootstrap';
+import { Nav, Navbar, Dropdown, DropdownButton } from 'react-bootstrap';
 
 import { loginRequest } from '../authConfig';
 import { AccountPicker } from './AccountPicker';
