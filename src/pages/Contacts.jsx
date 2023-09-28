@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
-import { ContactsData } from '../components/DataDisplay';
+
 import { protectedResources } from '../authConfig';
 import useGraphWithMsal from '../hooks/useGraphWithMsal';
+import { ContactsData } from '../components/ContactsData';
 
 export const Contacts = () => {
     const [graphData, setGraphData] = useState(null);

@@ -6,6 +6,8 @@ import { loginRequest } from '../authConfig';
 import { AccountPicker } from './AccountPicker';
 import { clearStorage } from '../utils/storageUtils';
 
+
+
 export const NavigationBar = () => {
     const [showProfilePicker, setShowProfilePicker] = useState(false);
     const { instance } = useMsal();
@@ -69,18 +71,21 @@ export const NavigationBar = () => {
                     Microsoft identity platform
                 </a>
                 <AuthenticatedTemplate>
-                    <Nav.Link className="navbarButton" href="/profile">
+                <Nav className="ml-auto">
+                    <Nav.Link className="navbarButton" activeClassName="active" href="/profile">
                         Profile
                     </Nav.Link>
-                    <Nav.Link className="navbarButton" href="/contacts">
+                    <Nav.Link className="navbarButton" activeClassName="active" href="/contacts">
                         Contacts
                     </Nav.Link>
-                    <Nav.Link className="navbarButton" href="/shifts">
+                    <Nav.Link className="navbarButton" activeClassName="active" href="/shifts">
                         Shifts
                     </Nav.Link>
-                    <Nav.Link className="navbarButton" href="/SharepointLists">
+                    <Nav.Link className="navbarButton" activeClassName="active" href="/SharepointLists">
                         Lists
                     </Nav.Link>
+                </Nav>
+
                     <div className="collapse navbar-collapse justify-content-end">
                         <DropdownButton
                             variant="warning"

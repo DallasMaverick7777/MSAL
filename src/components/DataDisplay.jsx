@@ -101,58 +101,6 @@ export const ProfileData = (props) => {
     );
 };
 
-export const ContactsData = (props) => {
-    
-    return (
-        <Container>
-            <Row>
-                <div className="data-area-div">
-                    <p>
-                        Acquired an <strong>Access Token </strong>for MS Graph with scopes:
-                        {props.response.scopes.map((scope, index) => (
-                            <mark key={scope}>{scope}</mark>
-                        ))}
-                    </p>
-
-                    <p>
-                        Calling <strong>Microsoft Graph API</strong>...
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>resource:</strong>
-                            <mark>User</mark> object
-                        </li>
-                        <li>
-                            <strong>endpoint:</strong> <mark>https://graph.microsoft.com/v1.0/me/contacts</mark>
-                        </li>
-                        <li>
-                            <strong>scope:</strong>
-                            <mark>Contacts.Read</mark>
-                        </li>
-                    </ul>
-                    <p>
-                        Contents of the <strong>response</strong> is below:
-                    </p>
-                </div>
-            </Row>
-            
-            <Row className="d-flex flex-row">
-                {!props.graphContacts.value  || props.graphContacts.value.length === 0 ? (
-                    <p className="text-center">You have 0 contacts</p>
-                ) : (
-                    props.graphContacts.value.map((contact) => (
-                        <Card className="card" key={contact.id}>
-                            <Card.Body>
-                                <Card.Title>{contact.displayName}</Card.Title>
-                                <Card.Text>{contact.personalNotes}</Card.Text>
-                            </Card.Body>
-                        </Card>
-                    ))
-                )}
-            </Row>         
-        </Container>
-    );    
-};
 
 export const ShiftsData = (props) => {
 

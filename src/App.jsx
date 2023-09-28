@@ -18,6 +18,7 @@ const Pages = () => {
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/shifts" element={<Shifts />} />
             <Route path="/SharepointLists" element={<SharepointLists />} />
+            
             <Route path="/" element={<Home />} />
         </Routes>
     );

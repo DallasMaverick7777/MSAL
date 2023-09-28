@@ -11,86 +11,45 @@
 }
 
 .iconText {
-    margin: 0 .5rem
+    margin: 0 .5rem;
 }
 
 .navbarStyle {
-    background-color: #292b2c;
-    padding: 0.5rem 1rem !important;
+    background-color: #f8f9fa; /* Update to Bootstrap background color */
+    padding: 1rem !important; /* Update padding */
     transition: background-color 0.3s ease-in-out;
-
 }
 
-.navbarButton {
-    color: #fff !important;
+/* .navbarButton {
+    color: #ffc107 !important; 
     padding: .5rem 1rem !important;
-}
+} */
 
 .tableColumn {
-    word-break: break-all
+    word-break: break-all;
 }
 
 .table {
     max-height: 37rem;
 }
 
-/* .card {
-    max-width: 20rem !important;
-    margin: 2px;
-    padding: 2px;
-} */
 
-.card {
-    --card-max-width: 20rem;
-    --card-margin: 0.5rem;
-    --card-padding: 0.5rem;
-    max-width: var(--card-max-width);
-    margin: var(--card-margin);
-    padding: var(--card-padding);
-    border: 1px solid #ddd;
-    border-radius: 0.25rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex; /* Display as flex container */
-    align-items: center; /* Align items vertically in center */
 
-    &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-}
-
-.cardImage {
-    width: 100px; /* Adjust the width of the thumbnail image */
-    height: 100px; /* Adjust the height of the thumbnail image */
-    margin-right: 1rem; /* Add margin to separate the image from the text */
-    margin-top: 0.5rem;
-
-}
-
-.cardContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Media Queries for Responsiveness */
-
-@media screen and (max-width: 576px) {
-    .card {
-        --card-max-width: 100%;
-        --card-margin: 1rem 0;
-        --card-padding: 1rem;
-        flex-direction: column; /* Stack content in a column on smaller screens */
-    }
-
-    .cardImage {
-        width: 100%; /* Adjust image width to fill the card width */
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 0; /* Remove margin for smaller screens */
-        margin-bottom: 0.5rem; /* Add some margin between image and text */
-
-    }
-}
+.navbarButton {
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbarButton:hover {
+    color: #f0ad4e; /* Change to your desired hover color */
+  }
+  
+  .navbarButton.active {
+    background-color: #f0ad4e; 
+    color: #ffffff; /* Change to your desired active color */
+    font-weight: bold; /* or any other style you want for the active state */
+  }
+  
